@@ -1,0 +1,533 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen-f5db485f.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-bccf8c07.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-c5541673.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;http&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-9de8951c.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="http">http</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#overview" class="toc-h1 toc-link" data-title="Overview">Overview</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#representation" class="toc-h1 toc-link" data-title="Representation">Representation</a>
+          </li>
+          <li>
+            <a href="#responses" class="toc-h1 toc-link" data-title="Responses">Responses</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-responses" class="toc-h2 toc-link" data-title="Get All Responses">Get All Responses</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-response" class="toc-h2 toc-link" data-title="Get a Specific Response">Get a Specific Response</a>
+                  </li>
+                  <li>
+                    <a href="#create-responses" class="toc-h2 toc-link" data-title="Create Responses">Create Responses</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://www.getfeedback.com/about-us' target='_blank'>About Us</a></li>
+            <li><a href='https://help.getfeedback.com/' target='_blank'>Support</a></li>
+            <li><a href='https://www.getfeedback.com/legal' target='_blank'>Terms of Use</a></li>
+            <li><a href='https://www.getfeedback.com/privacy' target='_blank'>Privacy Notice</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='overview'>Overview</h1>
+<p>The GetFeedback Reporting API is simple, modern, RESTful, and JSON-based. All API access is over HTTPS to the <code>api.getfeedback.com</code> domain. Appropriate HTTP verbs are used to manipulate resources.</p>
+<h1 id='authentication'>Authentication</h1><pre class="highlight http tab-http"><code><span class="err">Authorization: Bearer mF_9.B5f-4.1JqM
+</span></code></pre>
+<p>API bearer tokens should be sent in an HTTP Authorization header. Follow the <a href="http://tools.ietf.org/html/rfc6750">RFC 6750 spec section 2.1</a>.</p>
+<h1 id='representation'>Representation</h1>
+<p>All dates or timestamps are returned and expected as ISO 8601 strings.</p>
+
+<p>The <code>Accept</code> HTTP header must always be sent to signify the correct resource representation. At this time only <code>application/json</code> is supported.</p>
+<h1 id='responses'>Responses</h1>
+<aside class="notice">
+A response object represents a single survey taker experience. It holds a collection of answers to every question in the survey. It also includes metadata about the taker collected by the GetFeedback system.
+</aside>
+<h2 id='get-all-responses'>Get All Responses</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/surveys/:survey_id/responses</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_GETFEEDBACK_ACCESS_TOKEN</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"active_models"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">525</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cTmIyeFWNwqTJcZbEpHYmA"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"completed"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-03-17T17:22:10.055-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-03-17T17:22:36.041-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"merge_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"xid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxxxxxxxxxxxxxxxxx"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"answers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">509</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MultipleChoiceAnswer"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"component_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-03-17T17:22:35.906-07:00"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"choices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"is_other"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">507</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RatingAnswer"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"component_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">92</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-03-17T17:22:34.097-07:00"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"scale"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /surveys/:survey_id/responses</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>since</strong></td>
+<td>Timestamp from which to return responses. If set with an ISO 8601 datestamp, responses are returned in ascending timestamp ordered by the <code>since_field</code> (see below). If not set or an incorrect format is passed, returns responses in descending timestamp order by <code>created_at</code>.</td>
+</tr>
+<tr>
+<td><strong>since_field</strong></td>
+<td>If using since, date on responses to compare to. Can be <code>created_at</code>, <code>updated_at</code>, or <code>completed_at</code>. When set to <code>completed_at</code>, status is filtered to only completed responses. Defaults to <code>created_at</code>.</td>
+</tr>
+<tr>
+<td><strong>until</strong></td>
+<td>If using since, timestamp to which to return responses. If set with an ISO 8601 datestamp, it will be the endcap date to the since param.</td>
+</tr>
+<tr>
+<td><strong>status</strong></td>
+<td>Can be set to started or completed and then only responses in that state will be returned. If not set, returns all responses.</td>
+</tr>
+<tr>
+<td><strong>per_page</strong></td>
+<td>Responses to return per page. Defaults to 30. Maximum 100.</td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td>Page number when paging through responses. Note there is no server cursor state.</td>
+</tr>
+</tbody></table>
+<h3 id='definitions'>Definitions</h3>
+<p><strong>merge_map:</strong> Parameters that were appended to the URL when the taker opened the survey.</p>
+
+<p><strong>component_id:</strong> Identifier for the survey question the answer represents.</p>
+
+<aside class="success">
+Responses are returned in descending timestamp order by created_at.
+</aside>
+<h2 id='get-a-specific-response'>Get a Specific Response</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/surveys/:survey_id/responses/:id</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_GETFEEDBACK_ACCESS_TOKEN</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">101413</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"du7x49xk6A29BpVmU2fwm4"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"completed"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T13:12:44.394-07:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T13:12:44.394-07:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T13:12:44.394-07:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"limited"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"merge_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="s2">"platform"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"browser"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"country_code_with_emoji"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"answers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">102025</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NetPromoter"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"component_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T13:12:44.439-07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T13:12:44.439-07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"response_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">101413</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"embedded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"grid_item"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">102026</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CustomerSatisfaction"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"component_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T13:12:44.501-07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T13:12:44.501-07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"response_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">101413</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"embedded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"grid_item"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">102027</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CustomerEffort"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"component_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T13:12:44.533-07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T13:12:44.533-07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"response_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">101413</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"embedded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"grid_item"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /responses/:id</code></p>
+
+<p><code>GET /surveys/:survey_id/responses/:id</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>id</strong></td>
+<td>The <code>id</code> of the response to retrieve</td>
+</tr>
+<tr>
+<td><strong>survey_id</strong></td>
+<td>The <code>id</code> of the parent survey of the response to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='create-responses'>Create Responses</h2><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/responses</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_GETFEEDBACK_ACCESS_TOKEN</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"total_recipients"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[name] - Take this survey"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Here's your survey!"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates responses in bulk</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST /responses</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>survey_id</strong></td>
+<td>Survey ID</td>
+</tr>
+<tr>
+<td><strong>anonymize</strong></td>
+<td>When true, disables click &amp; open tracking as well as disallows relating responses to recipient records</td>
+</tr>
+<tr>
+<td><strong>from_email_name</strong></td>
+<td>Sender&#39;s name</td>
+</tr>
+<tr>
+<td><strong>from_email_domain</strong></td>
+<td>Sender&#39;s email domain</td>
+</tr>
+<tr>
+<td><strong>subject</strong></td>
+<td>Email invite subject</td>
+</tr>
+<tr>
+<td><strong>title</strong></td>
+<td>Email invite title</td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td>Email invite body</td>
+</tr>
+<tr>
+<td><strong>button_label</strong></td>
+<td>Email invite button label</td>
+</tr>
+<tr>
+<td><strong>subscriber_list</strong></td>
+<td>An array of objects that include these keys: <code>email</code>, <code>first_name</code> and <code>last_name</code></td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<p>Standard HTTP error codes are used to signal success and errors:</p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Request was successful and a representation is included in the body.</td>
+</tr>
+<tr>
+<td><strong>204</strong></td>
+<td>No Content: Request was successful. No body is returned.</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Bad Request: There was an issue parsing your request. Check the JSON.</td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>Unprocessable Entity: The request made an invalid state change or didn’t pass application-level validation. Check the errors returned in the body.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="http">http</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
