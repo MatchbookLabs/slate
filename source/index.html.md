@@ -11,6 +11,7 @@ toc_footers:
   - <a href='https://www.getfeedback.com/privacy' target='_blank'>Privacy Notice</a>
 includes:
   - responses
+  - surveys
   - errors
 
 search: true
