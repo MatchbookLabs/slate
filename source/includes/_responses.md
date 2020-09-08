@@ -7,7 +7,7 @@ A response object represents a single survey taker experience. It holds a collec
 
 ```http
 GET /surveys/:survey_id/responses HTTP/1.1
-Authorization: token YOUR_GETFEEDBACK_ACCESS_TOKEN
+Authorization: Bearer YOUR_GETFEEDBACK_ACCESS_TOKEN
 Content-Type: application/json
 ```
 
@@ -83,7 +83,7 @@ Responses are returned in descending timestamp order by created_at.
 
 ```http
 GET /surveys/:survey_id/responses/:id HTTP/1.1
-Authorization: token YOUR_GETFEEDBACK_ACCESS_TOKEN
+Authorization: Bearer YOUR_GETFEEDBACK_ACCESS_TOKEN
 Content-Type: application/json
 ```
 
