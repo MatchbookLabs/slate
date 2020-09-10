@@ -32,7 +32,7 @@ Content-Type: application/json
       "only_defined_merge_keys": null,
       "discard_invalid_values": null,
       "public_host_settings": {
-          "host": "localhost:3000",
+          "host": "",
           "protocol": "http"
       },
       "font_override": null,
@@ -122,7 +122,7 @@ Content-Type: application/json
     "only_defined_merge_keys": null,
     "discard_invalid_values": null,
     "public_host_settings": {
-      "host": "localhost:3000",
+      "host": "",
       "protocol": "http"
     },
     "font_override": null,
@@ -150,7 +150,7 @@ Content-Type: application/json
     },
     "publish_to_id": null,
     "draft_id": null,
-    "share_token": "OSaqbk1T",
+    "share_token": "samplesharetoken",
     "whitelabeled": null,
     "automagic_salesforce_sync": null,
     "merge_field_encryption": null,
@@ -159,7 +159,7 @@ Content-Type: application/json
     "draft_differs": false,
     "last_published": null,
     "publishing": null,
-    "response_graph_token": "eJyrViouLSpLrYzPTFGyMtRRSkksSY3PzCtJLSpLzFGyAvIrlWoB_JENEA.3uhiolOl_0WP7iG_h6vYj0HyUSudQ-Bn0TJqKG0CLHo",
+    "response_graph_token": "sampletoken",
     "server_held_change_count": 0,
     "theme": {
       "id": 1,
@@ -178,8 +178,8 @@ Content-Type: application/json
     "logo_media_object": null,
     "user": {
       "id": 1,
-      "email": "dev@getfeedback.com",
-      "name": "Flabongo Don",
+      "email": "email@example.com",
+      "name": "Example Name",
       "status": "active",
       "source": "organic",
       "permissions": 5,

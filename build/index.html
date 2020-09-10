@@ -280,7 +280,7 @@
 A response object represents a single survey taker experience. It holds a collection of answers to every question in the survey. It also includes metadata about the taker collected by the GetFeedback system.
 </aside>
 <h2 id='get-all-responses'>Get All Responses</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/surveys/:survey_id/responses</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_GETFEEDBACK_ACCESS_TOKEN</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer YOUR_GETFEEDBACK_ACCESS_TOKEN</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"active_models"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -364,7 +364,7 @@ A response object represents a single survey taker experience. It holds a collec
 Responses are returned in descending timestamp order by created_at.
 </aside>
 <h2 id='get-a-specific-response'>Get a Specific Response</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/surveys/:survey_id/responses/:id</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">token YOUR_GETFEEDBACK_ACCESS_TOKEN</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer YOUR_GETFEEDBACK_ACCESS_TOKEN</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
 </code></pre>
 <blockquote>
@@ -474,7 +474,7 @@ Responses are returned in descending timestamp order by created_at.
       </span><span class="s2">"only_defined_merge_keys"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"discard_invalid_values"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"public_host_settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost:3000"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
           </span><span class="s2">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"font_override"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -562,7 +562,7 @@ Responses are returned in descending timestamp order by created_at.
     </span><span class="s2">"only_defined_merge_keys"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"discard_invalid_values"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"public_host_settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost:3000"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
       </span><span class="s2">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"font_override"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -590,7 +590,7 @@ Responses are returned in descending timestamp order by created_at.
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"publish_to_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"draft_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"share_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OSaqbk1T"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"share_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samplesharetoken"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"whitelabeled"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"automagic_salesforce_sync"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"merge_field_encryption"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -599,7 +599,7 @@ Responses are returned in descending timestamp order by created_at.
     </span><span class="s2">"draft_differs"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_published"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"publishing"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"response_graph_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eJyrViouLSpLrYzPTFGyMtRRSkksSY3PzCtJLSpLzFGyAvIrlWoB_JENEA.3uhiolOl_0WP7iG_h6vYj0HyUSudQ-Bn0TJqKG0CLHo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"response_graph_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sampletoken"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"server_held_change_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"theme"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -618,8 +618,8 @@ Responses are returned in descending timestamp order by created_at.
     </span><span class="s2">"logo_media_object"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dev@getfeedback.com"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Flabongo Don"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email@example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Name"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"organic"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
