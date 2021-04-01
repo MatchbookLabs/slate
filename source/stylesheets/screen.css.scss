@@ -76,6 +76,7 @@ html, body {
     display: block;
     max-width: 80%;
     margin-bottom: $logo-margin;
+    padding: $nav-padding;
   }
 
   &>.search {
@@ -151,6 +152,9 @@ html, body {
     transition-duration: 200ms;
   }
 
+  .toc-link:hover {
+    background-color: #000;
+  }
   // This is the currently selected ToC entry
   .toc-link.active {
     background-color: $nav-active-bg;
@@ -174,29 +178,27 @@ html, body {
     font-size: 12px;
   }
 
+  .toc-footer:before {
+    content: '';
+    display: block;
+    margin-left: $nav-padding;
+    box-sizing: border-box;
+    height: 15px;
+    width: $nav-width - ($nav-padding*2);
+    border-top: 1px solid $search-box-border-color;
+  }
+  
   .toc-footer {
     padding: 1em 0;
     margin-top: 1em;
-    border-top: 1px dashed $nav-footer-border-color;
-
-    li,a {
-      color: $nav-text;
-      text-decoration: none;
-    }
 
     a:hover {
-      text-decoration: underline;
-    }
-
-    li {
-      font-size: 0.8em;
-      line-height: 1.7;
-      text-decoration: none;
+      background-color: #000;
     }
   }
 }
 
-.toc-link, .toc-footer li {
+.toc-link, .toc-footer a {
   padding: 0 $nav-padding 0 $nav-padding;
   display: block;
   overflow-x: hidden;
@@ -445,6 +447,10 @@ html, body {
     margin-top: 0;
   }
 
+  a {
+    color: #258060;
+  }
+
   img {
     max-width: 100%;
   }
@@ -533,7 +539,7 @@ html, body {
     &>p { margin: 0; }
 
     a {
-      color: #fff;
+      color: #258060;
       text-decoration: none;
       border-bottom: dashed 1px #ccc;
     }
